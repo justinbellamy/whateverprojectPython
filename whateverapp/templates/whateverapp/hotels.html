@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Hotel Listing</title>
+  </head>
+  <body>
+    <h1>All Hotels</h1>
+
+    {% if cities_list %}
+        <ul>
+            {% for city in cities_list %}
+                <li>{{ city.name }}
+                    <ul><li>{{  city.hotel_set.all.count }} Hotels:</li>
+                        <ul>
+                         {% for hotel in city.hotel_set.all %}
+                             <li>{{ hotel.name }}</li>
+                             <ul>
+                             <li>Rating: {{ hotel.rating }}</li>
+                             <li>Room Charge: ${{ hotel.room_charge }}</li>
+                             <li>Rooms Available? {{ hotel.rooms_available }}</li>
+                             </ul>
+                          {%  endfor %}
+                        </ul>
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No cities are available.</p>
+    {% endif %}
+
+  </body>
+</html>

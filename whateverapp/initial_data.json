@@ -1,0 +1,49 @@
+[
+	{
+		"model": "whateverapp.city",
+		"pk": 1,
+		"fields": {
+			"name" : "New York City"
+		}
+	},
+	{
+		"model": "whateverapp.city",
+		"pk": 2,
+		"fields": {
+			"name" : "Los Angeles"
+		}
+	},
+	{
+	"model": "whateverapp.hotel",
+		"pk": 1,
+		"fields": {
+			"name" : "Atlantic Hotel",
+			"room_charge" : "199.95",
+			"rooms_available" : "True",
+			"rating" : "4",
+			"city_id" : "1"
+		}
+	},
+	{
+	"model": "whateverapp.hotel",
+		"pk": 2,
+		"fields": {
+			"name" : "Downtown Hotel",
+			"room_charge" : "245.99",
+			"rooms_available" : "False",
+			"rating" : "5",
+			"city_id" : "1"
+		}
+	},
+	{
+	"model": "whateverapp.hotel",
+		"pk": 3,
+		"fields": {
+			"name" : "Pacific Hotel",
+			"room_charge" : "101.00",
+			"rooms_available" : "True",
+			"rating" : "3",
+			"city_id" : "2"
+		}
+	}
+]
